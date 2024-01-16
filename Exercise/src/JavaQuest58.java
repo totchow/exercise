@@ -51,11 +51,9 @@ public class JavaQuest58 {
 
   public static String changebase(int n, int k) {
 
-    if (n == k) {
-      return String.valueOf(10);
-    } else if (n < k) {
+    if (n < k) {
         return String.valueOf(n);
-      } else if (n/k < k) {
+      } else if (n/k <= k) {
           return String.valueOf(n/k).concat(String.valueOf(n%k));
         } else {            
             return changebase(n/k, k).concat(String.valueOf(n%k));
